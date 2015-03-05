@@ -31,6 +31,7 @@ module.exports = function(grunt) {
               // all js files should be here
               '<%= paths.srcjs %>jquery.min.js',
               '<%= paths.srcjs %>jquery.Jcrop.min.js',
+              '<%= paths.srcjs %>h5crop.js',
               '<%= paths.srcjs %>app.js'
             ]
         }
