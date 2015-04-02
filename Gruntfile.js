@@ -52,9 +52,6 @@ module.exports = function(grunt) {
 
     // compile scss file
     sass: {
-      options: {
-        sourceMap: true
-      },
       dist: {
         files: {
           '<%= paths.css%>app.css': '<%= paths.css %>app.scss'
@@ -155,12 +152,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['imagemin', 'uglify', 'concat', 'sass', 'autoprefixer', 'cssmin', 'connect', 'watch']);
   grunt.registerTask('deploy', ['copy:deploy']);
